@@ -27,6 +27,10 @@ const ImageLinks = {
   mainSliderImage: require('../assets/images/main/mainSliderImage.png'),
 
   // Explore
+
+  gardening: require('../assets/images/explore/gardening.png'),
+  interior: require('../assets/images/explore/interior.png'),
+  legal: require('../assets/images/explore/legal.png'),
   exBuy: require('../assets/images/explore/exBuy.png'),
   exSell: require('../assets/images/explore/exSell.png'),
   exViewMore: require('../assets/images/explore/exViewMore.png'),
