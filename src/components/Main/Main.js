@@ -168,7 +168,7 @@ export default function Main() {
         </View>
         <View style={[flexRow, justifyBetween, mr20, ml20, mb20]}>
           <Text style={[colorLightBlue, f12, fw500]}>
-            Products recommended for you
+            Based on your preferences
           </Text>
         </View>
         <View style={[flexRow, justifyBetween, mr20, ml20, mb20]}>
