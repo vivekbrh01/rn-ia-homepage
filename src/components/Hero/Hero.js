@@ -123,7 +123,7 @@ export default function Hero() {
   return (
     <View style={[m20]}>
       <Text style={[f24, fw600, colorWhite]}>Hello Jay!</Text>
-      <Image source={ImageLinks.heroBanner} style={[styles.heroBanner, mb20]} />
+      <Image source={ImageLinks.heroBanner} style={[styles.heroBanner, pb20]} />
     </View>
   );
 }

@@ -15,6 +15,7 @@ import commonStyles from '../../utils/common.styles';
 import Footer from '../Footer';
 import Header from '../Header';
 import Hero from '../Hero';
+import Main from '../Main';
 
 export default function Home() {
   useEffect(() => {
@@ -155,10 +156,11 @@ export default function Home() {
             style={styles.backgroundImage}>
             <Header />
             <Hero />
+            <Main />
+            {/* <Footer /> */}
           </ImageBackground>
         </View>
       </LinearGradient>
-      {/* <Footer /> */}
     </View>
   );
 }
