@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {
   View,
   ImageBackground,
@@ -9,27 +9,19 @@ import {
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-import styles from './Home.styles';
+import styles from './RecomendedServices.styles';
 import ImageLinks from '../../utils/ImagesLinks';
 import commonStyles from '../../utils/common.styles';
 import Footer from '../Footer';
 import Header from '../Header';
 import Hero from '../Hero';
 import Main from '../Main';
-import Explore from '../Explore';
-import RecomendedServices from '../RecomendedServices';
 
-export default function Home() {
+export default function RecomendedServices() {
   useEffect(() => {
     LogBox.ignoreLogs(['Animated: `useNativeDriver`']);
     LogBox.ignoreAllLogs();
   }, []);
-
-  // function handleProceedBtnPress() {
-  //   navigation.navigate('OrderConfirmation', {
-  //     selectedMembershipData: membershipTypes[currentSlide],
-  //   });
-  // }
 
   const {
     neomorphBg,
@@ -147,21 +139,46 @@ export default function Home() {
   return (
     <View style={styles.main}>
       <LinearGradient
-        colors={['#0C3A67', '#1A2E42', '#202931']}
+        colors={['#81184F', '#5E0E38', '#420525']}
         useAngle={true}
         angle={139.42}
         angleCenter={{x: 0.5, y: 0.5}}
         style={styles.linearGradient}>
         <View>
-          <ImageBackground source={ImageLinks.homeBackground}>
-            <Header />
-            <Hero />
-            <Main />
-            <Explore />
-            {/* Recomended Properties */}
-            {/* My Properties */}
-            <RecomendedServices />
-            <Footer />
+          <ImageBackground
+            source={ImageLinks.homeBackground}
+            style={styles.backgroundImage}>
+            <View style={[p20]}>
+              <Text style={[f16, fw500, colorWhite]}>
+                Recommended for Jay's properties
+              </Text>
+              <Text style={[f12, colorWhite]}>
+                Frequently availed for properties like yours
+              </Text>
+            </View>
+            <View
+              style={[flexRow, justifyBetween, pr20, pl20, pb20, alignCenter]}>
+              <View style={[alignCenter]}>
+                <Image source={ImageLinks.legal} style={[styles.exIcon]} />
+                <Text stylele={[f11, colorWhite]}>Legal</Text>
+                <Text stylele={[f11, colorWhite]}>assistance</Text>
+              </View>
+              <View style={[alignCenter]}>
+                <Image source={ImageLinks.interior} style={[styles.exIcon]} />
+                <Text stylele={[f11, colorWhite]}>Interior Project</Text>
+                <Text stylele={[f11, colorWhite]}>Management</Text>
+              </View>
+              <View style={[alignCenter]}>
+                <Image source={ImageLinks.exSell} style={[styles.exIcon]} />
+                <Text stylele={[f11, colorWhite]}>Gardening</Text>
+                <Text stylele={[f11, colorWhite]}></Text>
+              </View>
+              <View style={[alignCenter]}>
+                <Image source={ImageLinks.exViewMore} style={[styles.exIcon]} />
+                <Text stylele={[f11, colorWhite]}>View more</Text>
+                <Text stylele={[f11, colorWhite]}></Text>
+              </View>
+            </View>
           </ImageBackground>
         </View>
       </LinearGradient>
