@@ -1,11 +1,34 @@
-import React from 'react';
+import React, {useState, useRef} from 'react';
 import {View, Image, Text} from 'react-native';
+import Carousel from 'react-native-snap-carousel';
 
 import styles from './Main.styles';
 import ImageLinks from '../../utils/ImagesLinks';
 import commonStyles from '../../utils/common.styles';
 
 export default function Main() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const carouselItems = [
+    {
+      image: ImageLinks.mainSliderImage,
+    },
+    {
+      image: ImageLinks.mainSliderImage,
+    },
+    {
+      image: ImageLinks.mainSliderImage,
+    },
+    {
+      image: ImageLinks.mainSliderImage,
+    },
+    {
+      image: ImageLinks.mainSliderImage,
+    },
+  ];
+
+  const carouselRef = useRef(null);
+
   const {
     neomorphBg,
     neomorphBorder,
@@ -120,6 +143,14 @@ export default function Main() {
     ml9,
   } = commonStyles;
 
+  function _renderItem({item, index}) {
+    return (
+      <View>
+        <Image source={item.image} style={[styles.mainSliderImage, mb20]} />
+      </View>
+    );
+  }
+
   return (
     <View style={styles.mainWrapper}>
       <View style={[m20]}>
@@ -196,6 +227,17 @@ export default function Main() {
             />
             <Text style={[f11, colorBlue, mb9]}>CCTV</Text>
           </View>
+        </View>
+        <View style={[mr20, ml20, mb30]}>
+          <Carousel
+            layout={'default'}
+            ref={carouselRef}
+            data={carouselItems}
+            sliderWidth={500}
+            itemWidth={300}
+            renderItem={_renderItem}
+            onSnapToItem={index => setActiveIndex(index)}
+          />
         </View>
       </View>
     </View>

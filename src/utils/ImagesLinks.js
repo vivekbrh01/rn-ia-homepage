@@ -24,6 +24,7 @@ const ImageLinks = {
   nameTransfer: require('../assets/images/main/nameTransfer.png'),
   survey: require('../assets/images/main/survey.png'),
   taxAssessment: require('../assets/images/main/taxAssessment.png'),
+  mainSliderImage: require('../assets/images/main/mainSliderImage.png'),
 
   // Footer
   footerBg: require('../assets/images/footer/footer-bg.png'),

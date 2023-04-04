@@ -15,4 +15,8 @@ export default StyleSheet.create({
     height: 65,
     width: 65,
   },
+  mainSliderImage: {
+    width: 261.6,
+    height: 115,
+  },
 });
