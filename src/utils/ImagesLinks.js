@@ -11,6 +11,9 @@ const ImageLinks = {
   // Search
   search: require('../assets/images/search/search.png'),
 
+  // Hero
+  heroBanner: require('../assets/images/hero/heroBanner.png'),
+
   // Footer
   footerBg: require('../assets/images/footer/footer-bg.png'),
   dashboard: require('../assets/images/footer/Dashboard.png'),

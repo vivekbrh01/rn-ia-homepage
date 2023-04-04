@@ -102,6 +102,9 @@ export default StyleSheet.create({
   },
 
   // font size
+  f24: {
+    fontSize: 24,
+  },
   f16: {
     fontSize: 16,
   },
