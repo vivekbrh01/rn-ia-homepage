@@ -14,6 +14,17 @@ const ImageLinks = {
   // Hero
   heroBanner: require('../assets/images/hero/heroBanner.png'),
 
+  // Main
+  mainBanner: require('../assets/images/main/mainBanner.png'),
+  cctv: require('../assets/images/main/cctv.png'),
+  civil: require('../assets/images/main/civil.png'),
+  deepCleaning: require('../assets/images/main/deepCleaning.png'),
+  electrical: require('../assets/images/main/electrical.png'),
+  gpa: require('../assets/images/main/gpa.png'),
+  nameTransfer: require('../assets/images/main/nameTransfer.png'),
+  survey: require('../assets/images/main/survey.png'),
+  taxAssessment: require('../assets/images/main/taxAssessment.png'),
+
   // Footer
   footerBg: require('../assets/images/footer/footer-bg.png'),
   dashboard: require('../assets/images/footer/Dashboard.png'),

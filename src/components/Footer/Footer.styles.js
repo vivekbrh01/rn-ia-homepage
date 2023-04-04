@@ -16,7 +16,7 @@ export default StyleSheet.create({
     marginRight: 20,
   },
   footerBg: {
-    height: '100%',
+    height: 62,
     width: '100%',
     backgroundColor: '#080A0B',
   },
