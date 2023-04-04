@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {
   View,
   ImageBackground,
@@ -9,28 +9,11 @@ import {
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-import styles from './Home.styles';
+import styles from './Footer.styles';
 import ImageLinks from '../../utils/ImagesLinks';
 import commonStyles from '../../utils/common.styles';
-import Footer from '../Footer';
 
-export default function Home() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  useEffect(() => {
-    LogBox.ignoreLogs(['Animated: `useNativeDriver`']);
-    LogBox.ignoreAllLogs();
-  }, []);
-
-  function handleSliderPageChange(pageCount) {
-    setCurrentSlide(pageCount);
-  }
-  // function handleProceedBtnPress() {
-  //   navigation.navigate('OrderConfirmation', {
-  //     selectedMembershipData: membershipTypes[currentSlide],
-  //   });
-  // }
-
+export default function Footer() {
   const {
     neomorphBg,
     neomorphBorder,
@@ -146,34 +129,31 @@ export default function Home() {
 
   return (
     <View style={styles.main}>
-      <LinearGradient
-        colors={['#0C3A67', '#1A2E42', '#202931']}
-        useAngle={true}
-        angle={139.42}
-        angleCenter={{x: 0.5, y: 0.5}}
-        style={styles.linearGradient}>
-        <View>
-          <ImageBackground
-            source={ImageLinks.homeBackground}
-            style={styles.backgroundImage}>
-            <View style={[flexRow, alignCenter, justifyBetween]}>
-              <TouchableOpacity>
-                <Image
-                  source={ImageLinks.hamburger}
-                  style={styles.backArrowWhite}
-                />
-              </TouchableOpacity>
-              <TouchableOpacity>
-                <Image source={ImageLinks.logo} style={styles.logo} />
-              </TouchableOpacity>
-              <TouchableOpacity>
-                <Image source={ImageLinks.search} style={styles.search} />
-              </TouchableOpacity>
-            </View>
-          </ImageBackground>
-        </View>
-      </LinearGradient>
-      <Footer />
+      <View>
+        <ImageBackground source={ImageLinks.footerBg} style={styles.footerBg}>
+          <View
+            style={[flexRow, alignCenter, justifyBetween, styles.footerPos]}>
+            <TouchableOpacity>
+              <Image source={ImageLinks.home} style={styles.footerIcons} />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Image source={ImageLinks.dashboard} style={styles.footerIcons} />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Image
+                source={ImageLinks.addButton}
+                style={styles.footerIconLarge}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Image source={ImageLinks.order} style={styles.footerIcons} />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Image source={ImageLinks.profile} style={styles.footerIcons} />
+            </TouchableOpacity>
+          </View>
+        </ImageBackground>
+      </View>
     </View>
   );
 }
