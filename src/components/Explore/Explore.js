@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {
   View,
   ImageBackground,
@@ -9,26 +9,19 @@ import {
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-import styles from './Home.styles';
+import styles from './Explore.styles';
 import ImageLinks from '../../utils/ImagesLinks';
 import commonStyles from '../../utils/common.styles';
 import Footer from '../Footer';
 import Header from '../Header';
 import Hero from '../Hero';
 import Main from '../Main';
-import Explore from '../Explore';
 
-export default function Home() {
+export default function Explore() {
   useEffect(() => {
     LogBox.ignoreLogs(['Animated: `useNativeDriver`']);
     LogBox.ignoreAllLogs();
   }, []);
-
-  // function handleProceedBtnPress() {
-  //   navigation.navigate('OrderConfirmation', {
-  //     selectedMembershipData: membershipTypes[currentSlide],
-  //   });
-  // }
 
   const {
     neomorphBg,
@@ -152,12 +145,35 @@ export default function Home() {
         angleCenter={{x: 0.5, y: 0.5}}
         style={styles.linearGradient}>
         <View>
-          <ImageBackground source={ImageLinks.homeBackground}>
-            <Header />
-            <Hero />
-            <Main />
-            <Explore />
-            <Footer />
+          <ImageBackground
+            source={ImageLinks.homeBackground}
+            style={styles.backgroundImage}>
+            <View style={[p20]}>
+              <Text style={[f16, fw500, colorWhite]}>
+                Explore all categories
+              </Text>
+              <Text style={[f12, colorWhite]}>
+                Over 240 products to ease your Real Estate needs
+              </Text>
+            </View>
+            <View style={[flexRow, justifyBetween, pr20, pl20, pb20]}>
+              <View>
+                <Image source={ImageLinks.valuation} style={[styles.exIcon]} />
+                <Text stylele={[f11, colorWhite]}>Valuation</Text>
+              </View>
+              <View>
+                <Image source={ImageLinks.exBuy} style={[styles.exIcon]} />
+                <Text stylele={[f11, colorWhite]}>Buy</Text>
+              </View>
+              <View>
+                <Image source={ImageLinks.exSell} style={[styles.exIcon]} />
+                <Text stylele={[f11, colorWhite]}>Sell</Text>
+              </View>
+              <View>
+                <Image source={ImageLinks.exViewMore} style={[styles.exIcon]} />
+                <Text stylele={[f11, colorWhite]}>View more</Text>
+              </View>
+            </View>
           </ImageBackground>
         </View>
       </LinearGradient>
