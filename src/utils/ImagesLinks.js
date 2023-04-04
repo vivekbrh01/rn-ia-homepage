@@ -43,9 +43,18 @@ const ImageLinks = {
   watch3: require('../assets/images/watchlist/watch3.png'),
   watch4: require('../assets/images/watchlist/watch4.png'),
 
-  //
+  // My properties
   propertiesSliderImage1: require('../assets/images/watchlist/propertiesSliderImage1.png'),
   propertiesSliderImage2: require('../assets/images/watchlist/propertiesSliderImage2.png'),
+
+  // Card
+  card1: require('../assets/images/cardImages/card1.png'),
+  card2: require('../assets/images/cardImages/card2.png'),
+  card3: require('../assets/images/cardImages/card3.png'),
+  card4: require('../assets/images/cardImages/card4.png'),
+  card5: require('../assets/images/cardImages/card5.png'),
+  card6: require('../assets/images/cardImages/card6.png'),
+  card7: require('../assets/images/cardImages/card7.png'),
 
   // Footer
   footerBg: require('../assets/images/footer/footer-bg.png'),

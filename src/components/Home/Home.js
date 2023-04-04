@@ -21,6 +21,7 @@ import RecomendedServices from '../RecomendedServices';
 import WatchList from '../WatchList';
 import Saved from '../Saved';
 import MyProperties from '../MyProperties';
+import Card from '../Card';
 
 export default function Home() {
   useEffect(() => {
@@ -161,7 +162,7 @@ export default function Home() {
             <Hero />
             <Main />
             <Explore />
-            {/* Recomended Properties */}
+            <Card />
             <MyProperties />
             <RecomendedServices />
             <WatchList />
