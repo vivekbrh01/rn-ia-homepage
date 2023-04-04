@@ -11,6 +11,14 @@ const ImageLinks = {
   // Search
   search: require('../assets/images/search/search.png'),
 
+  // Footer
+  footerBg: require('../assets/images/footer/footer-bg.png'),
+  dashboard: require('../assets/images/footer/Dashboard.png'),
+  addButton: require('../assets/images/footer/addButton.png'),
+  home: require('../assets/images/footer/Home.png'),
+  order: require('../assets/images/footer/Order.png'),
+  profile: require('../assets/images/footer/Profile.png'),
+
   // arrows
   backArrowWhite: require('../assets/images/arrow/back-arrow-white.png'),
   rightArrowWhite: require('../assets/images/arrow/right-arrow-white.png'),
