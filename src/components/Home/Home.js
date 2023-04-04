@@ -20,6 +20,7 @@ import Explore from '../Explore';
 import RecomendedServices from '../RecomendedServices';
 import WatchList from '../WatchList';
 import Saved from '../Saved';
+import MyProperties from '../MyProperties';
 
 export default function Home() {
   useEffect(() => {
@@ -161,7 +162,7 @@ export default function Home() {
             <Main />
             <Explore />
             {/* Recomended Properties */}
-            {/* My Properties */}
+            <MyProperties />
             <RecomendedServices />
             <WatchList />
             <Saved />

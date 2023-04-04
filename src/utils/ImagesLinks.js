@@ -43,6 +43,10 @@ const ImageLinks = {
   watch3: require('../assets/images/watchlist/watch3.png'),
   watch4: require('../assets/images/watchlist/watch4.png'),
 
+  //
+  propertiesSliderImage1: require('../assets/images/watchlist/propertiesSliderImage1.png'),
+  propertiesSliderImage2: require('../assets/images/watchlist/propertiesSliderImage2.png'),
+
   // Footer
   footerBg: require('../assets/images/footer/footer-bg.png'),
   dashboard: require('../assets/images/footer/Dashboard.png'),
