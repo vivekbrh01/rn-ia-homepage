@@ -36,6 +36,13 @@ const ImageLinks = {
   exViewMore: require('../assets/images/explore/exViewMore.png'),
   valuation: require('../assets/images/explore/valuation.png'),
 
+  // Watchlist
+
+  watch1: require('../assets/images/watchlist/watch1.png'),
+  watch2: require('../assets/images/watchlist/watch2.png'),
+  watch3: require('../assets/images/watchlist/watch3.png'),
+  watch4: require('../assets/images/watchlist/watch4.png'),
+
   // Footer
   footerBg: require('../assets/images/footer/footer-bg.png'),
   dashboard: require('../assets/images/footer/Dashboard.png'),

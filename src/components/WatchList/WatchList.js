@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {
   View,
   ImageBackground,
@@ -9,28 +9,15 @@ import {
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-import styles from './Home.styles';
+import styles from './WatchList.styles';
 import ImageLinks from '../../utils/ImagesLinks';
 import commonStyles from '../../utils/common.styles';
-import Footer from '../Footer';
-import Header from '../Header';
-import Hero from '../Hero';
-import Main from '../Main';
-import Explore from '../Explore';
-import RecomendedServices from '../RecomendedServices';
-import WatchList from '../WatchList';
 
-export default function Home() {
+export default function WatchList() {
   useEffect(() => {
     LogBox.ignoreLogs(['Animated: `useNativeDriver`']);
     LogBox.ignoreAllLogs();
   }, []);
-
-  // function handleProceedBtnPress() {
-  //   navigation.navigate('OrderConfirmation', {
-  //     selectedMembershipData: membershipTypes[currentSlide],
-  //   });
-  // }
 
   const {
     neomorphBg,
@@ -147,26 +134,33 @@ export default function Home() {
 
   return (
     <View style={styles.main}>
-      <LinearGradient
-        colors={['#0C3A67', '#1A2E42', '#202931']}
-        useAngle={true}
-        angle={139.42}
-        angleCenter={{x: 0.5, y: 0.5}}
-        style={styles.linearGradient}>
-        <View>
-          <ImageBackground source={ImageLinks.homeBackground}>
-            <Header />
-            <Hero />
-            <Main />
-            <Explore />
-            {/* Recomended Properties */}
-            {/* My Properties */}
-            <RecomendedServices />
-            <WatchList />
-            <Footer />
-          </ImageBackground>
+      <View style={styles.watchlistWrapper}>
+        <View style={[flexRow, justifyBetween, mr20, ml20, mb9]}>
+          <Text style={[colorBlue, f16, fw500]}>My watchlist</Text>
+          <Text style={[colorLightPurple, underlinePurple, f12]}>View all</Text>
         </View>
-      </LinearGradient>
+        <View style={[flexRow, justifyBetween, mr20, ml20, mb20]}>
+          <Text style={[colorLightBlue, f12, fw500]}>
+            Properties that you are tracking
+          </Text>
+        </View>
+        <View style={[flexRow, justifyBetween, pr20, pl20, pb20]}>
+          <View>
+            <Image source={ImageLinks.watch1} style={[styles.watchlistImage]} />
+          </View>
+          <View>
+            <Image source={ImageLinks.watch2} style={[styles.watchlistImage]} />
+          </View>
+        </View>
+        <View style={[flexRow, justifyBetween, pr20, pl20, pb20]}>
+          <View>
+            <Image source={ImageLinks.watch3} style={[styles.watchlistImage]} />
+          </View>
+          <View>
+            <Image source={ImageLinks.watch4} style={[styles.watchlistImage]} />
+          </View>
+        </View>
+      </View>
     </View>
   );
 }
