@@ -26,6 +26,12 @@ const ImageLinks = {
   taxAssessment: require('../assets/images/main/taxAssessment.png'),
   mainSliderImage: require('../assets/images/main/mainSliderImage.png'),
 
+  // Explore
+  exBuy: require('../assets/images/explore/exBuy.png'),
+  exSell: require('../assets/images/explore/exSell.png'),
+  exViewMore: require('../assets/images/explore/exViewMore.png'),
+  valuation: require('../assets/images/explore/valuation.png'),
+
   // Footer
   footerBg: require('../assets/images/footer/footer-bg.png'),
   dashboard: require('../assets/images/footer/Dashboard.png'),
