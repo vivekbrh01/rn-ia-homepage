@@ -1,33 +1,11 @@
-import React, {useEffect, useState} from 'react';
-import {
-  View,
-  ImageBackground,
-  Image,
-  Text,
-  TouchableOpacity,
-  LogBox,
-} from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
+import React from 'react';
+import {View, Image, Text} from 'react-native';
 
-import styles from './Home.styles';
+import styles from './Hero.styles';
 import ImageLinks from '../../utils/ImagesLinks';
 import commonStyles from '../../utils/common.styles';
-import Footer from '../Footer';
-import Header from '../Header';
-import Hero from '../Hero';
 
-export default function Home() {
-  useEffect(() => {
-    LogBox.ignoreLogs(['Animated: `useNativeDriver`']);
-    LogBox.ignoreAllLogs();
-  }, []);
-
-  // function handleProceedBtnPress() {
-  //   navigation.navigate('OrderConfirmation', {
-  //     selectedMembershipData: membershipTypes[currentSlide],
-  //   });
-  // }
-
+export default function Hero() {
   const {
     neomorphBg,
     neomorphBorder,
@@ -53,6 +31,7 @@ export default function Home() {
     borderRadius8,
     borderTopLightBlue,
     borderRightLightBlue,
+    f24,
     f16,
     f14,
     f12,
@@ -142,23 +121,9 @@ export default function Home() {
   } = commonStyles;
 
   return (
-    <View style={styles.main}>
-      <LinearGradient
-        colors={['#0C3A67', '#1A2E42', '#202931']}
-        useAngle={true}
-        angle={139.42}
-        angleCenter={{x: 0.5, y: 0.5}}
-        style={styles.linearGradient}>
-        <View>
-          <ImageBackground
-            source={ImageLinks.homeBackground}
-            style={styles.backgroundImage}>
-            <Header />
-            <Hero />
-          </ImageBackground>
-        </View>
-      </LinearGradient>
-      {/* <Footer /> */}
+    <View style={[m20]}>
+      <Text style={[f24, fw600, colorWhite]}>Hello Jay!</Text>
+      <Image source={ImageLinks.heroBanner} style={[styles.heroBanner, mb20]} />
     </View>
   );
 }
